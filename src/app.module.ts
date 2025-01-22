@@ -9,9 +9,10 @@ import { EventModule } from './event/event.module';
 import { WorkersModule } from './workers/workers.module';
 import { WorkerModule } from './worker/worker.module';
 import { DbconnectModule } from './dbconnect/dbconnect.module';
+import { SuperadminModule } from './superadmin/superadmin.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/nestproject'),UserModule, AdminModule, EventModule, WorkerModule,WorkersModule, DbconnectModule],
+  imports: [MongooseModule.forRoot('mongodb://localhost/nestproject'),UserModule, AdminModule, EventModule, WorkerModule,WorkersModule, DbconnectModule, SuperadminModule],
   controllers: [AppController],
   providers: [AppService],
 })
