@@ -12,6 +12,7 @@ export class DbconnectController {
     async createuser(@Body() data:authdto):Promise<dbconnectdocument|string>{
       return this.dbconnectservice.createnewusers(data);
     }
+    
     @Patch('updateAuth')
     async updateuser(@Body() data:authdto):Promise<dbconnectdocument[]>{
         return this.dbconnectservice.updateusers(data);
